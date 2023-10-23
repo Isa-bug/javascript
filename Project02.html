@@ -1,0 +1,47 @@
+<!doctype html>
+<!--Isabelle Rodriguez, 10/20/2023-->
+<html lang="en">
+    <head>
+        <title>Project 2</title>
+        <meta charset="utf-8">
+	</head>
+ <body>
+	<Script>
+	console.log(document.body.parentNode);
+	console.log(document.body.childNodes);
+	console.log(document.body.firstChild);
+	console.log(document.body.lastChild);
+	console.log(document.body.previousSibling);
+	console.log(document.body.nextSibling);
+	console.log(document.body.parentElement);
+	console.log(document.body.children);
+	console.log(document.body.firstElementChild);
+	console.log(document.body.lastElementChild);
+	console.log(document.body.previousElemnetSibling);
+	console.log(document.body.nextElementSibling);
+	</script>
+			<header>
+                <h1>Questions</h1>
+            </header>
+            <main>
+			<ol>
+                <b><p>1. At the end of the Browser environment less, the author makes this comment "Now we’ll get down to learning DOM, because the document plays the central role in the UI."Explain this sentence to a non-technical person. What does it mean???</b></p>
+				<p>DOM, or the Document object model, is a document that allows for quick changes to aspects on a page. UI stands for user intereface, or the way that users interact with a browser page based on its appearance. </p>
+				<b><p>2.  What specification documents does the author recommend (include the link and the description of the specification in your answer.)</b></p>
+				<p>The author suggects a DOM specification document, and suggests a <a href="https://software.hixie.ch/utilities/js/live-dom-viewer/">Document Object Model viewer </a> to view the structure in real time.</p>
+				<b><p>3.  Explain the relationship between an HTML element, a node, and the DOM. </b></p>
+				<p>HTML elements are objects/features represented in the source coding of a page. HTML elemnets are represented by nodes in the DOM. The DOM is the website structure, so the browser understands how to display elements on a page.</p>
+				<b><p>4.  What is a "blank" text node and how can you avoid them?</b></p>
+				<p>A blank text node is a node that can olnly have whitespace characters. They're not visible in a browser, but can cause issues with memory/performance. The best way to avoid them is to minimize the use of spaces.</p>		
+			</ol>
+	<script>
+for (let i = 0; i < document.body.childNodes.length; i++) { //This is a loop, it sets the "i" to 0
+      console.log( document.body.childNodes[i] ); // this prints the value of the "i" index for each nodes element
+  }
+for (let node of document.body.childNodes) { // this loops all nodes of the body, it also assigns each child to the "node" variable.
+      console.log(node); // This statement logs the child node to the console. The number of nodes with display on the console on after another.
+  }
+</script> 		
+			</main>
+    </body>
+</html>
