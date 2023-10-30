@@ -1,0 +1,89 @@
+<!doctype html>
+<!--Isabelle Rodriguez, 10/25/2023-->
+<html lang="en">
+    <head>
+        <title>Project 2</title>
+        <meta charset="utf-8">
+	</head>
+  <body>
+	<h1>Johnson County Community College</h1>
+	<h2>Liberal Arts</h2>
+	<h2>Business</h2>
+	<h2>Nursing</h2>
+	<h2>Biology</h2>
+	<h2>Healthcare Management</h2>
+	<h2>Psychology</h2>
+  <script>
+    const h1_element = document.querySelector("h1");
+    const h2_element1 = document.createElement("h2");
+    const h2_element2 = document.createElement("h2");
+    const h2_element3 = document.createElement("h2");
+
+    h1_element.textContent = "Johnson County Community College";
+
+    h2_element1.textContent = "Liberal Arts";//3.
+    h2_element2.textContent = "Business";
+    h2_element3.textContent = "Nursing";
+
+    h2_element4.textContent = "Biology";///4.
+    h2_element5.textContent = "Healthcare Management";
+    h2_element6.textContent = "Psychology";
+
+    h1_element.appendChild(h2_element1);
+    h1_element.appendChild(h2_element2);
+    h1_element.appendChild(h2_element3);
+    h1_element.appendChild(h2_element4);
+    h1_element.appendChild(h2_element5);
+    h1_element.appendChild(h2_element6);
+	
+	console.log(document.body); //shows the element DOM tree.
+	console.dir(document.body); // shows the element as a DOM object, good to explore its properties.
+	
+	let ul = document.createElement('ul');
+    document.body.append(ul);
+
+    while (true) {
+      let data = prompt("Enter the text for the list item", "");
+
+      if (!data) {
+        break;
+      }
+
+      let li = document.createElement('li');
+      li.textContent = data;
+      ul.append(li);
+    }
+  </script>
+			<header>
+                <h1>Questions</h1>
+            </header>
+            <main>
+			<ol>
+				<b><p>1.  Identify the three major types of nodes found in an HTML document, and a unique property of each.</b></p>
+				<p>Element Nodes: this is a parent node to all other node types, most common root element node being “html”</p>
+				<p>Text nodes: These nodes contain the actual text of an HTML document and can be found inside element nodes. They are not enclosed by any tags.</p>
+				<p>Comment nodes: These nodes contain comments that are used by authors to add notes to their code.</p>
+				<b><p>2.  Why is the JavaScript textContent property safer than innerHTML?</b></p>
+				<p>innerHTML does a full overwrite, thus removing previous content, the JavaSccript textContent property all symbols are treated as is. The JavaScript textContent property is safer security wise as it only allows for text changes versus structure changes allowed by innerHTML. </p>
+				<b><p>3.  Explain the relationship between an HTML attribute and a corresponding DOM property (explain the connection to JavaScript).  Use a specific example in your answer.</b></p>
+				<p>Attributes describe properties and values of elements. A “class” attribute is used for the class name of an element, while an “href” attribute is used for a link URL to an anchor. In JavaScript a DOM property is created for each attribute to access and change the attribute’s value.</p>
+				<b><p>4.  Why do we rarely, if ever use document.write() ? (Hint:  I have a stand-alone youtube on this subject for details.)</b></p>
+				<p>Document.write() is not a very good support for testing, debugging, or deployment. It can be messy in code scripts if not also incompatible with certain browsers.</p>	
+				<b><p>5.  What is a JavaScript method?  Define and provide several examples.</b></p>
+				<p> </p>
+				<b><p>6.  What is a JavaScript property? Define and provide several examples.</b></p>
+				<p> </p>
+				<b><p>7.  The "Create a Tree from the object" exercise shows you that yes, JavaScript is also an object-oriented programming language (we get into custom objects like this in WEB 124).  What built-in objects have you been working with so far?</b></p>
+				<p> </p>
+				<b><p>8.  What is a JavaScript object?  Define and provide several examples.</b></p>
+				<p> </p>
+				<b><p>9.  What is a CSS selector? Define and provide several examples.</b></p>
+				<p> </p>
+				<b><p>10.  What is a CSS property? Define and provide several examples.</b></p>
+				<p> </p>
+				<b><p>11.  What is a CSS declaration? Define and provide several examples.</b></p>
+				<p> </p>
+			</ol>	
+			</main>
+    </body>
+</html>
