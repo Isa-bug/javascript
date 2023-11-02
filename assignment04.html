@@ -1,0 +1,24 @@
+<!doctype html>
+<!--Isabelle Rodriguez, 11/2/2023-->
+<html lang="en">
+    <head>
+        <title>Project 4</title>
+        <meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Questions</h1>
+	
+	<script>
+		const user=prompt("What is your name?"); /* Exercise 1.*/
+		const proceed=confirm("Do you give permission to use your name on this web page?");  /* Exercise 2.*/
+		if(proceed) {document.getElementById("user-heading").textContent = (proceed ? user : "Privacy Please").trim();} /*Exercise 3 & 4*/
+		const age = parseInt(prompt("Enter your age")); /*Exercise 5.*/
+	</script>
+			<main>
+				<ol>
+					<b><p>1.  alert, confirm, and prompt are methods of which object?</b></p>
+					<p>These prompts are all methods of the window object in JavaScript.</p>
+				</ol>	
+			</main>
+    </body>
+</html>
