@@ -8,7 +8,116 @@
 	<body>
 		<h1>Questions</h1>
 	<script>
-		
+	function evaluateExpression(num1, num2, operator) { 
+		if (operator == "+") {
+			return num1 + num2;
+		} else if (operator == "-") {
+		return num1 - num2;
+		} else if (operator == "*") {
+		return num1 * num2;
+		} else if (operator == "/") {
+		return num1 / num2;
+		} else {
+		console.log("Invalid operator");
+		}
+		}
+
+		console.log(evaluateExpression(3, 5, '+'));
+		console.log(evaluateExpression(3, 5, '-'));
+		console.log(evaluateExpression(3, 5, '*'));
+		console.log(evaluateExpression(3, 5, '/')); /*Excercise 1*/
+	function getCheeryMessage() { /*Excercise 2*/
+    let cheeryMessage = ["You are loved by many!",
+                         "The sun will rise tomorrow!",
+                         "You are valuable!",
+                         "You are appreciated!",
+                         "There is light at the end of the tunnel!"];
+    return cheeryMessage[ Math.floor(Math.random() * cheeryMessage.length) ];
+}
+
+console.log(getCheeryMessage());
+/*Excercise 3*/
+// Define a function to uppercase the first character of a string.
+function uppercaseFirstChar(str) {
+    // Check if the string is empty.
+    if (str.length === 0) {
+        return str;
+    }
+    
+    // Use a regular expression to match the first character of the string.
+    let firstChar = str[0];
+    
+    // Use string addition to add the uppercased first character back to the rest of the string.
+    return firstChar.toUpperCase() + str.substring(1);
+}
+
+// Define a function to lowercase the last character of a string.
+function lowercaseLastChar(str) {
+    // Check if the string is empty.
+    if (str.length === 0) {
+        return str;
+    }
+    
+    // Use a regular expression to match the last character of the string and extract it.
+    let lastChar = str.substr(str.length - 1);
+    
+    // Use string concatenation to add the lowercased last character back to the rest of the string.
+    return str.substr(0, str.length - 1) + lastChar.toLowerCase();
+}
+/*Excerciese 4*/
+function checkSpam(text) {
+    // Define a regular expression to match email addresses.
+    let emailRegExp = /(([\w-]+\@[\w-]+\.[\w-]+)])/;
+
+    // Use the match method to test if the `text` contains an email address.
+    let email = emailRegExp.exec(text);
+    if (email) {
+        return 'This looks like an email address, but we do not want to store it in our database!';
+    }
+
+    // Test the `text` for HTML tags.
+    if (text.includes( '<' ) && text.includes( '>' )) {
+        return 'We do not allow HTML or other markup in the text.';
+    }
+
+    // Test the `text` for profanity.
+    if (text.includes('!@#%^&*')) {
+        return 'Please refrain from using profanity or abusive language.';
+    }
+
+    // Return the original text without any modifications.
+    return text;
+}
+
+def truncate(str, max_len):
+    # Check if the string's length is greater than or equal to the given maximum length.
+    if len(str) >= max_len:
+        # Use string slicing to return the first n characters of the string.
+        return str[:max_len]
+    # If the string's length is less than the maximum length, return the whole string.
+    return str
+
+function averageInput(arr) {
+    // If the array is empty or contains fewer than 2 values, return an error message.
+    if (arr.length < 2) {
+        return 'There must be at least 2 values to take the average!';
+    }
+
+    // Set up and return an average variable.
+    let avg = 0;
+
+    // Add up all the values in the array.
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    // Calculate the average.
+    avg = sum / arr.length;
+
+    return avg;
+}
+
 	</script>
 			<main>
 				<b><p>1.  Identify a common JavaScript style guide.</p></b>
@@ -38,10 +147,8 @@
 						<p>Example: let arr= ['apple, 'pineapple', 'peaches];</p></br>
 					<br><b><p>Objects contain multiple properties with various names and values.</p></b>
 						<p>Example:let user= {'name': 'Lani', 'age':1 </p></br>
-				<b><p>6.  Explain the phrase "Fractions divided by powers of 2 are exactly represented in the binary system" and what universal problem this is referring to in all programming languages.</p></b>
-					<p> </p>
-					
-					
+					<b><p>6.  Explain the phrase "Fractions divided by powers of 2 are exactly represented in the binary system" and what universal problem this is referring to in all programming languages.</p></b>
+						<p>A property of the binary systen is that there are only 2 possible digits, 1 and 0. This propert allows for better accuracy and is applicable to any programming language or computer that uses binary for number representation.</p><br></br>
 			</main>
     </body>
 </html>
